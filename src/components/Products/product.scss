@@ -1,0 +1,148 @@
+#product_page {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .text {
+            margin-bottom: 20px;
+
+            h1 {
+                font-size: 24px;
+                text-align: center;
+                border-bottom: 1px solid gray;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #777777;
+            }
+        }
+
+        .basket{
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            width: 0;
+            right: 0;
+            z-index: 1;
+            overflow: hidden;
+            i{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid white;
+                color: white;
+                margin: 10px;
+                cursor: pointer;
+                color: white;
+            }
+        }
+        .wishlist{
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            width: 0;
+            right: 0;
+            z-index: 1;
+            overflow: hidden;
+            i{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid white;
+                color: white;
+                margin: 10px;
+                cursor: pointer;
+                color: white;
+            }
+        }
+
+        .products {
+           
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-between;
+            gap: 15px;
+            ul {
+                border: 1px solid gray;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 5px;
+                width: 350px;
+                min-height: 450px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                img {
+                    width: 280px;
+                    height: 300px;
+                }
+                .buttons {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background-color: rgb(67, 185, 67);
+                    overflow: hidden;
+                    transition: 500ms;
+                    i{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 15px;
+                        cursor: pointer;
+                        transition: 400ms;
+                        background-color: white;
+                        &:hover{
+                            color: green;
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+                li {
+                    text-align: center;
+                }
+                &:hover {
+                    .category {
+                        color: green;
+                        cursor: pointer;
+                    }
+                    .buttons{
+                        height: 40px;
+                    }
+                    box-shadow: rgba(20, 201, 3, 0.527) 0px 1px 2px, rgba(28, 243, 0, 0.801) 0px 2px 4px, rgba(0, 255, 0, 0.07) 0px 4px 8px, rgba(0, 236, 20, 0.07) 0px 8px 16px, rgba(4, 204, 4, 0.07) 0px 16px 32px, rgba(59, 231, 6, 0.07) 0px 32px 64px;
+                }
+            }
+        }
+    }
+}
+.active{
+    width: 350px !important;
+    background-color: rgb(134, 134, 134);
+}
